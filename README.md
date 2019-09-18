@@ -5,7 +5,7 @@ Spring boot project example in very simply way for `produce & consume message` u
 You can read the whole tutorial here https://alexanderarda.com/blog/rabbitmq-publish-consume-menggunakan-spring-boot/
 
 
-## :rocket: Pre-requisitions
+Pre-requisitions
 Create new queue in your RabbitMQ and give it a name `hello`
 
 ## :rocket: Spring Project #1 - Produce Message
