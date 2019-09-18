@@ -1,1 +1,54 @@
-"# spring-rabbitmq" 
+# Spring Boot x RabbitMQ - Produce & Consume Messages Example
+
+Spring boot project example in very simply way for `produce & consume message` using  `spring-boot-starter-amqp` library without database and any others dependencies. Just being simplest one!
+
+## :rocket: Spring Project #1 - Produce Message
+
+#### Main Method
+
+```java
+public void run(String... args) throws Exception {  
+
+  for(int i=0;i<10;i++){  
+  double rand = Math.random();  
+        producer.sendMessage("This is message " + rand);  
+        System.out.println("Sent = "+rand);  
+    }  
+    
+}
+``` 
+
+#### Produce/Publishing Message Method
+
+```java
+@Autowired  
+private RabbitTemplate rabbitTemplate;  
+  
+public void sendMessage(String message) {  
+	// routing key = "hello"  
+	rabbitTemplate.convertAndSend("hello", message);  
+}
+``` 
+
+
+## :rocket: Spring Project #2 - Consume Message
+```java
+@RabbitListener(queues = "hello")  
+public void listen(String message) {  
+  System.out.println("Consuming message = " + message);  
+}
+``` 
+
+## Maven Dependency
+```xml
+<dependency>  
+ <groupId>org.springframework.boot</groupId>  
+ <artifactId>spring-boot-starter-amqp</artifactId>  
+</dependency>
+```
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
