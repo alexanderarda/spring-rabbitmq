@@ -32,6 +32,8 @@ public void sendMessage(String message) {
 
 
 ## :rocket: Spring Project #2 - Consume Message
+#### Consume Method
+
 ```java
 @RabbitListener(queues = "hello")  
 public void listen(String message) {  
