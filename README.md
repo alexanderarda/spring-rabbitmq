@@ -12,6 +12,7 @@ You can read the whole tutorial here https://alexanderarda.com/blog/rabbitmq-pub
 public void run(String... args) throws Exception {  
 
   for(int i=0;i<10;i++){  
+  	// create random message
   	double rand = Math.random();  
         producer.sendMessage("This is message " + rand);  
         System.out.println("Sent = "+rand);  
