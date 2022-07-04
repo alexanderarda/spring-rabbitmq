@@ -2,7 +2,7 @@
 
 Spring boot project example in very simply way for `produce & consume message` using  `spring-boot-starter-amqp` library without database and any others dependencies. Just being simplest one!
 
-You can read the whole tutorial here https://alexanderarda.com/blog/rabbitmq-publish-consume-menggunakan-spring-boot/
+You can read the whole tutorial https://alexanderarda.medium.com/rabbitmq-publish-consume-menggunakan-spring-boot-cab3c899167b (in Bahasa)
 
 
 ## Pre-requisitions
